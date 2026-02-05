@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var notesRouter = require('./routes/notes');
 var catRouter = require('./routes/cat');
+var dogRouter = require('./routes/dog');
 
 var app = express();
 
@@ -24,7 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/notes', notesRouter);
-app.use('/cat', catRouter)
+app.use('/cat', catRouter);
+app.use('/dog', dogRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
